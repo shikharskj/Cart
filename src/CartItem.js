@@ -13,7 +13,19 @@ class CartItem extends React.Component {
     }
 
     increaseQuantity =  () => {
-        console.log(this.state);
+        // console.log(this.state);
+        // this.state.qty +=1;
+        //setState form1  (use if prev state is not required)
+        // this.setState({
+        //     qty: this.state.qty +1
+        // });
+
+        //setState form2 (use if prev stateis required)
+        this.setState((prevState) => {
+            return {
+                qty:prevState.qty + 1
+            }
+        })
     }
 
     render() {
@@ -32,20 +44,20 @@ class CartItem extends React.Component {
                         <img 
                             alt="increase" 
                             className = "action-icons" 
-                            src = "https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1618214750~hmac=5de3f66124a1c7d5ddb9fb22d8341323"
+                            src = "https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1618332061~hmac=ee16097273e869f0d8ce47f888121ea5"
                             onClick = { this.increaseQuantity }
                          />
                         <img 
                             alt="decrease" 
                             className = "action-icons" 
-                            src = "https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1618214696~hmac=e1d6e888ee6a7a7464a64530e8668d3f" 
+                            src = "https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1618332106~hmac=213becf7651f352e59de4c94628c3890" 
 
                         />
                         <img 
                             alt="delete" 
                             className = "action-icons" 
-                            src = "https://www.flaticon.com/svg/vstatic/svg/3096/3096673.svg?token=exp=1618214779~hmac=fa96b83aff40b6af4a618e8dfdcf2488" 
-                            
+                            src = "https://www.flaticon.com/svg/vstatic/svg/3096/3096673.svg?token=exp=1618332138~hmac=7a02f7accb6358b25a70fcbfee82470f" 
+
                         />
                     </div>
                 </div>
