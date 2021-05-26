@@ -1,11 +1,14 @@
 import React from 'react';
-import CartItem from './CartItem';
+// import CartItem from './CartItem';
 
 const Navbar = (props) => {
 
     return(
+        
         <div style= { styles.nav } >
+           <h1>CART</h1>
             <div style= { styles.cartIconContainer } >
+                
                 <img style = { styles.cartIcon } src="https://pics.freeicons.io/uploads/icons/png/6635486791578982984-512.png" alt="cart-icon" />    
                 <span style= { styles.cartCount } > { props.count } </span>
             </div>    
@@ -19,10 +22,14 @@ const styles = {
       marginRight: 20
     },
     nav: {
+      paddingLeft: 20,
+      paddingRight: 20,
+      marginLeft: 150,
+      marginRight: 150,
       height: 70,
-      background: '#4267b2',
+      background: 'rgb(47,3,177)',
       display: 'flex',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
       alignItems: 'center'
     },
     cartIconContainer: {
